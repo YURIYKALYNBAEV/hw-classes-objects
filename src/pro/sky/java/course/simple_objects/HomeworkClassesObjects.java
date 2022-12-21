@@ -6,16 +6,18 @@ public class HomeworkClassesObjects {
     }
 
     public static void task1() {
-        Author authorNameTolstoy = new Author("Л.Н.Толстой");
-        Author authorNameDostoevsky = new Author("Ф.М.Достоевский");
+        Author authorTolstoy = new Author("Лев", "Толстой");
+        Author authorDostoevsky = new Author("Федор", "Достоевский");
 
-        Book bookNameTolstoy = new Book("Война и мир", authorNameTolstoy, 1867);
+        Book bookNameTolstoy = new Book("Война и мир", authorTolstoy, 1867);
         System.out.println("Название книги - " + bookNameTolstoy.getBookName() + " автор - " +
-                authorNameTolstoy.getAuthorName() + " год публикации книги - " + bookNameTolstoy.getPublishingYear());
+                authorTolstoy.getAuthorName() + " " + authorTolstoy.getAuthorSurname() +
+                " год публикации книги - " + bookNameTolstoy.getPublishingYear());
 
-        Book bookNameDostoevsky = new Book("Преступление и наказание", authorNameDostoevsky, 1866);
+        Book bookNameDostoevsky = new Book("Преступление и наказание", authorDostoevsky, 1866);
         System.out.println("Название книги - " + bookNameDostoevsky.getBookName() + " автор - " +
-                authorNameDostoevsky.getAuthorName() + " год публикации книги - " + bookNameDostoevsky.getPublishingYear());
+                authorDostoevsky.getAuthorName() + " " + authorDostoevsky.getAuthorSurname() +
+                " год публикации книги - " + bookNameDostoevsky.getPublishingYear());
 
         bookNameTolstoy.setPublishingYear(1868);
         System.out.println("Год публикации книги - " + bookNameTolstoy.getPublishingYear());
